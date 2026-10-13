@@ -4,8 +4,13 @@
 
 CorelDRAW Graphics Suite · MoggyDay · 2026 · v27.2
 
-# CorelDRAW Graphics Suite 2026 “Pro for Windows: print layouts, CDR” [v27.2]
+# CorelDRAW Graphics Suite 2026 “for Windows: print layouts, CDR” [v27.2]
 
+<p>
+  <a href="https://moggydayprogram.com/programs/coreldraw"><img src="docs/media/shot-1.jpg" alt="about" width="280"></a>
+  <a href="https://moggydayprogram.com/programs/coreldraw"><img src="docs/media/shot-2.jpg" alt="document" width="280"></a>
+  <a href="https://moggydayprogram.com/programs/coreldraw"><img src="docs/media/shot-3.jpg" alt="welcome" width="280"></a>
+</p>
 <p><img src="docs/media/logos/coreldraw.svg" alt="CorelDRAW Graphics Suite" height="48"></p>
 
 MoggyDay keeps one stable URL for CorelDRAW Graphics Suite: EN / RU. Print-shop layouts and CDR. Russian UI, 721 MB, Windows x64.
