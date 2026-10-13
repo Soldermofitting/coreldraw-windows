@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>
+    (function () {
+      function pick() {
+        try {
+          var q = new URLSearchParams(location.search).get("lang");
+          if (q === "ru" || q === "en") return q;
+        } catch (e) {}
+        try {
+          var saved = localStorage.getItem("md-lang");
+          if (saved === "ru" || saved === "en") return saved;
+        } catch (e) {}
+        var list = [];
+        if (navigator.languages) list = list.concat(navigator.languages);
+        if (navigator.language) list.push(navigator.language);
+        if (navigator.userLanguage) list.push(navigator.userLanguage);
+        for (var i = 0; i < list.length; i++) {
+          var l = String(list[i] || "").toLowerCase();
+          if (l === "ru" || l.indexOf("ru-") === 0) return "ru";
+          if (l === "en" || l.indexOf("en-") === 0) return "en";
+        }
+        return "en";
+      }
+      var lang = pick();
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute("data-lang", lang);
+    })();
+  </script>
+  <title>CorelDRAW Graphics Suite 2026 v27.2 for Windows — MoggyDay</title>
+  <meta name="description" content="CorelDRAW Graphics Suite 2026 (v27.2) for Windows. Print-shop layouts and CDR. Russian UI, 721 MB, Windows x64. Catalog: moggydayprogram.com">
+  <meta name="keywords" content="coreldraw windows, coreldraw 2026, coreldraw на русском, cdr editor windows, MoggyDay, moggydayprogram.com">
+  <link rel="canonical" href="https://moggydayprogram.com/programs/coreldraw">
+  <link rel="alternate" hreflang="en" href="https://soldermofitting.github.io/coreldraw-windows/?lang=en">
+  <link rel="alternate" hreflang="ru" href="https://soldermofitting.github.io/coreldraw-windows/?lang=ru">
+  <meta property="og:title" content="CorelDRAW Graphics Suite 2026 for Windows — MoggyDay">
+  <meta property="og:description" content="Print-shop layouts and CDR. Russian UI, 721 MB, Windows x64.">
+  <meta property="og:url" content="https://moggydayprogram.com/programs/coreldraw">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Unbounded:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #140f0c;
+      --ink-2: #1c1612;
+      --panel: #251c16;
+      --panel-2: #2e241c;
+      --line: #43362c;
+      --text: #f6efe6;
+      --mute: #b9a898;
+      --copper: #e0a45a;
+      --copper-ink: #1c1308;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--text);
+      font: 17px/1.55 Manrope, system-ui, sans-serif;
+      background:
+        radial-gradient(900px 420px at 88% -8%, rgba(224, 164, 90, 0.14), transparent 50%),
+        radial-gradient(800px 380px at 0% 12%, rgba(157, 184, 166, 0.08), transparent 46%),
+        linear-gradient(180deg, var(--ink-2), var(--ink) 38%);
+      min-height: 100vh;
+    }
+    main { max-width: 980px; margin: 0 auto; padding: 28px 22px 72px; }
+    .lang-switch { display: flex; gap: 8px; margin: 0 0 18px; }
+    .lang-switch button {
+      background: transparent; color: var(--text); border: 1px solid var(--line);
+      font: inherit; font-weight: 700; padding: 8px 12px; cursor: pointer; border-radius: 10px;
+    }
+    html[data-lang="en"] .lang-switch button[data-set-lang="en"],
+    html[data-lang="ru"] .lang-switch button[data-set-lang="ru"] {
+      background: var(--copper); color: var(--copper-ink); border-color: var(--copper);
+    }
+    header.hero {
+      display: grid; grid-template-columns: 260px 1fr; gap: 22px;
+      align-items: stretch; margin-bottom: 22px;
+    }
+    .site-card {
+      position: relative; display: flex; flex-direction: column;
+      overflow: hidden; min-height: 280px; padding: 18px;
+      text-decoration: none; color: var(--text);
+      background: var(--panel); border: 1px solid var(--line); border-radius: 18px;
+    }
+    .site-card:hover { background: var(--panel-2); }
+    .site-card-glow { pointer-events: none; position: absolute; inset: 0 auto auto 0; width: 100%; height: 7rem; }
+    .site-card-top { position: relative; display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+    .site-card-icon {
+      width: 48px; height: 48px; border-radius: 12px;
+      display: grid; place-items: center; overflow: hidden;
+    }
+    .site-card-icon.wide { width: 92px; }
+    .site-card-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .invert { filter: invert(1); }
+    .site-card-size { font-size: 12px; color: var(--mute); }
+    .site-card h3 {
+      position: relative; font-family: Unbounded, Manrope, sans-serif;
+      font-size: 18px; line-height: 1.25; font-weight: 700; margin: 18px 0 0;
+    }
+    .site-card p { position: relative; margin: 8px 0 0; font-size: 13px; line-height: 1.5; color: var(--mute); }
+    .site-card-foot {
+      position: relative; margin-top: auto; padding-top: 16px;
+      display: flex; justify-content: space-between; align-items: flex-end; gap: 10px;
+      font-size: 12px; color: var(--mute);
+    }
+    .site-card-foot span:last-child { text-align: right; }
+    h1 {
+      font-family: Unbounded, Manrope, sans-serif;
+      font-size: clamp(22px, 3.4vw, 32px); line-height: 1.2;
+      margin: 0 0 10px; font-weight: 700;
+    }
+    .meta { color: var(--mute); font-size: 14px; margin: 0 0 14px; }
+    .cta { display: flex; flex-wrap: wrap; gap: 8px; }
+    .cta a {
+      display: inline-block; padding: 10px 14px; text-decoration: none;
+      font-weight: 700; color: var(--copper-ink); background: var(--copper); border-radius: 10px;
+    }
+    .cta a.ghost { background: transparent; color: var(--text); border: 1px solid var(--line); }
+    h2 { font-family: Unbounded, Manrope, sans-serif; font-size: 20px; margin: 32px 0 10px; font-weight: 700; }
+    p, li { max-width: 68ch; }
+    a { color: var(--copper); }
+    table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; }
+    th, td { text-align: left; padding: 7px 6px; border-bottom: 1px solid var(--line); }
+    .rels { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+    .rel {
+      position: relative; display: flex; flex-direction: column; min-height: 150px;
+      padding: 14px; text-decoration: none; color: var(--text);
+      background: var(--panel); border: 1px solid var(--line); border-radius: 16px; overflow: hidden;
+    }
+    .rel:hover { background: var(--panel-2); }
+    .rel::before {
+      content: ""; pointer-events: none; position: absolute; inset: 0 0 auto; height: 5rem;
+      background: linear-gradient(to bottom, rgba(224, 164, 90, 0.14), transparent);
+    }
+    .rel-art { width: 40px; height: 40px; border-radius: 10px; overflow: hidden; position: relative; }
+    .rel-art img { width: 100%; height: 100%; object-fit: contain; }
+    .rel b { display: block; margin-top: 12px; font-family: Unbounded, Manrope, sans-serif; font-size: 13px; font-weight: 600; line-height: 1.3; }
+    footer { margin-top: 40px; color: var(--mute); font-size: 13px; }
+    [data-i18n] { display: none; }
+    html[data-lang="ru"] [data-i18n="ru"],
+    html[data-lang="en"] [data-i18n="en"] { display: block; }
+    @media (max-width: 720px) {
+      header.hero { grid-template-columns: 1fr; }
+      .rels { grid-template-columns: 1fr 1fr; }
+    }
+
+  </style>
+</head>
+<body>
+<main>
+  <nav class="lang-switch" aria-label="Language">
+    <button type="button" data-set-lang="en">English</button>
+    <button type="button" data-set-lang="ru">Русский</button>
+  </nav>
+  <div data-i18n="en" lang="en">
+    <header class="hero">
+      <a class="site-card" href="https://moggydayprogram.com/en/programs/coreldraw">
+        <span class="site-card-glow" style="background:linear-gradient(to bottom, #8fc45126, transparent)"></span>
+        <div class="site-card-top">
+          <span class="site-card-icon wide" style="background:#122a17"><img src="media/logos/coreldraw.svg" alt=""></span>
+          <span class="site-card-size">721 MB</span>
+        </div>
+        <h3>CorelDRAW Graphics Suite 2026</h3>
+        <p>Print-shop layouts and CDR. Russian UI, 721 MB, Windows x64.</p>
+        <div class="site-card-foot">
+          <span>Graphics</span>
+          <span>11 Sep 2026<br>1 421</span>
+        </div>
+      </a>
+      <div>
+        <p class="meta">CorelDRAW Graphics Suite · MoggyDay · 2026 · v27.2</p>
+        <h1>CorelDRAW Graphics Suite 2026 “Pro for Windows: print layouts, CDR” [v27.2]</h1>
+        <div class="cta">
+          <a href="https://moggydayprogram.com/en/programs/coreldraw">Open card</a>
+          <a class="ghost" href="https://moggydayprogram.com/programs/coreldraw">Карточка</a>
+          <a class="ghost" href="https://moggydayprogram.com/en/categories/graphics">Graphics catalog</a>
+        </div>
+      </div>
+    </header>
+    <p>MoggyDay keeps one stable URL for CorelDRAW Graphics Suite: EN / RU. This GitHub page describes the catalog card. Packages are not hosted here.</p>
+    <p>Print-shop layouts and CDR. Russian UI, 721 MB, Windows x64.</p>
+    <h2>Who this is for</h2>
+    <p>Windows 10/11 x64. Download from the program card on moggydayprogram.com. GitHub Pages is description only.</p>
+    <h2>What is on the live page</h2>
+    <table><thead><tr><th>#</th><th>On the card</th></tr></thead><tbody><tr><td>1</td><td>Vector layout</td></tr><tr><td>2</td><td>CDR for print shops</td></tr><tr><td>3</td><td>PHOTO-PAINT nearby</td></tr><tr><td>4</td><td>Russian UI, Windows x64</td></tr></tbody></table>
+    <ul><li>Vector layout</li><li>CDR for print shops</li><li>PHOTO-PAINT nearby</li><li>Russian UI, Windows x64</li></ul>
+    <h2>Download</h2>
+    <ol>
+      <li>Open <a href="https://moggydayprogram.com/en/programs/coreldraw">CorelDRAW Graphics Suite 2026 “Pro for Windows: print layouts, CDR” [v27.2]</a> or <a href="https://moggydayprogram.com/programs/coreldraw">CorelDRAW Graphics Suite 2026 «Pro для Windows: полиграфия, CDR» [v27.2]</a>.</li>
+      <li>Stay on moggydayprogram.com.</li>
+      <li>Use the primary button on that card. Prefer <a href="https://moggydayprogram.com/en/launcher">MoggyDay Launcher</a> for large archives.</li>
+      <li>After a catalog update, reload the same URL.</li>
+    </ol>
+    <h2>Official links</h2>
+    <table>
+      <tr><th>EN</th><td><a href="https://moggydayprogram.com/en/programs/coreldraw">https://moggydayprogram.com/en/programs/coreldraw</a></td></tr>
+      <tr><th>RU</th><td><a href="https://moggydayprogram.com/programs/coreldraw">https://moggydayprogram.com/programs/coreldraw</a></td></tr>
+      <tr><th>Hub</th><td><a href="https://moggydayprogram.com/categories/graphics">https://moggydayprogram.com/categories/graphics</a></td></tr>
+      <tr><th>Category</th><td><a href="https://moggydayprogram.com/categories/graphics">https://moggydayprogram.com/categories/graphics</a></td></tr>
+      <tr><th>Catalog</th><td><a href="https://moggydayprogram.com/programs">https://moggydayprogram.com/programs</a></td></tr>
+      <tr><th>Launcher</th><td><a href="https://moggydayprogram.com/launcher">https://moggydayprogram.com/launcher</a></td></tr>
+    </table>
+    <h2>Queries</h2>
+    <ul><li><a href="https://moggydayprogram.com/en/programs/coreldraw">coreldraw windows</a></li>
+      <li><a href="https://moggydayprogram.com/en/programs/coreldraw">coreldraw 2026</a></li>
+      <li><a href="https://moggydayprogram.com/en/programs/coreldraw">coreldraw на русском</a></li>
+      <li><a href="https://moggydayprogram.com/en/programs/coreldraw">cdr editor windows</a></li></ul>
+    <h2>More programs on MoggyDay</h2>
+    <div class="rels"><a class="rel" href="https://moggydayprogram.com/en/programs/adobe-illustrator"><span class="rel-art" style="background:#2e1b02"><img src="media/logos/adobe-illustrator.svg" alt=""></span><b>Illustrator</b></a>
+      <a class="rel" href="https://moggydayprogram.com/en/programs/adobe-photoshop"><span class="rel-art" style="background:#001e36"><img src="media/logos/adobe-photoshop.svg" alt=""></span><b>Photoshop</b></a>
+      <a class="rel" href="https://moggydayprogram.com/en/programs/autocad"><span class="rel-art" style="background:#2e0a17"><img src="media/logos/autocad.svg" alt=""></span><b>AutoCAD</b></a>
+      <a class="rel" href="https://moggydayprogram.com/en/programs/adobe-acrobat-pro"><span class="rel-art" style="background:#2e0808"><img src="media/logos/adobe-acrobat-pro.svg" alt=""></span><b>Acrobat Pro</b></a></div>
+    <footer>Canonical: <a href="https://moggydayprogram.com/en/programs/coreldraw">https://moggydayprogram.com/en/programs/coreldraw</a>. No installer on GitHub Pages.</footer>
+  </div>
+  <div data-i18n="ru" lang="ru">
+    <header class="hero">
+      <a class="site-card" href="https://moggydayprogram.com/programs/coreldraw">
+        <span class="site-card-glow" style="background:linear-gradient(to bottom, #8fc45126, transparent)"></span>
+        <div class="site-card-top">
+          <span class="site-card-icon wide" style="background:#122a17"><img src="media/logos/coreldraw.svg" alt=""></span>
+          <span class="site-card-size">721 МБ</span>
+        </div>
+        <h3>CorelDRAW Graphics Suite 2026</h3>
+        <p>Макеты под типографию и CDR. Русский, 721 МБ, Windows x64.</p>
+        <div class="site-card-foot">
+          <span>Графика</span>
+          <span>11 сен 2026<br>1 421</span>
+        </div>
+      </a>
+      <div>
+        <p class="meta">CorelDRAW Graphics Suite · MoggyDay · 2026 · v27.2</p>
+        <h1>CorelDRAW Graphics Suite 2026 «Pro для Windows: полиграфия, CDR» [v27.2]</h1>
+        <div class="cta">
+          <a href="https://moggydayprogram.com/programs/coreldraw">Открыть карточку</a>
+          <a class="ghost" href="https://moggydayprogram.com/en/programs/coreldraw">Open card</a>
+          <a class="ghost" href="https://moggydayprogram.com/categories/graphics">Каталог графики</a>
+        </div>
+      </div>
+    </header>
+    <p>MoggyDay держит один адрес карточки CorelDRAW Graphics Suite: RU / EN. GitHub Pages — описание. Сборки только на сайте.</p>
+    <p>Макеты под типографию и CDR. Русский, 721 МБ, Windows x64.</p>
+    <h2>Для кого это</h2>
+    <p>Windows 10/11 x64. Скачивание с карточки на moggydayprogram.com.</p>
+    <h2>Что на живой карточке</h2>
+    <table><thead><tr><th>#</th><th>На карточке</th></tr></thead><tbody><tr><td>1</td><td>Векторная вёрстка</td></tr><tr><td>2</td><td>CDR для типографий</td></tr><tr><td>3</td><td>PHOTO-PAINT рядом</td></tr><tr><td>4</td><td>Русский интерфейс, Windows x64</td></tr></tbody></table>
+    <ul><li>Векторная вёрстка</li><li>CDR для типографий</li><li>PHOTO-PAINT рядом</li><li>Русский интерфейс, Windows x64</li></ul>
+    <h2>Скачать</h2>
+    <ol>
+      <li>Откройте <a href="https://moggydayprogram.com/programs/coreldraw">CorelDRAW Graphics Suite 2026 «Pro для Windows: полиграфия, CDR» [v27.2]</a> или <a href="https://moggydayprogram.com/en/programs/coreldraw">CorelDRAW Graphics Suite 2026 “Pro for Windows: print layouts, CDR” [v27.2]</a>.</li>
+      <li>Оставайтесь на moggydayprogram.com.</li>
+      <li>Жмите основную кнопку на карточке. Для большого архива — <a href="https://moggydayprogram.com/launcher">MoggyDay Launcher</a>.</li>
+      <li>После обновления каталога открывайте тот же URL.</li>
+    </ol>
+    <h2>Официальные ссылки</h2>
+    <table>
+      <tr><th>RU</th><td><a href="https://moggydayprogram.com/programs/coreldraw">https://moggydayprogram.com/programs/coreldraw</a></td></tr>
+      <tr><th>EN</th><td><a href="https://moggydayprogram.com/en/programs/coreldraw">https://moggydayprogram.com/en/programs/coreldraw</a></td></tr>
+      <tr><th>Хаб</th><td><a href="https://moggydayprogram.com/categories/graphics">https://moggydayprogram.com/categories/graphics</a></td></tr>
+      <tr><th>Категория</th><td><a href="https://moggydayprogram.com/categories/graphics">https://moggydayprogram.com/categories/graphics</a></td></tr>
+      <tr><th>Каталог</th><td><a href="https://moggydayprogram.com/programs">https://moggydayprogram.com/programs</a></td></tr>
+      <tr><th>Лаунчер</th><td><a href="https://moggydayprogram.com/launcher">https://moggydayprogram.com/launcher</a></td></tr>
+    </table>
+    <h2>Запросы</h2>
+    <ul><li><a href="https://moggydayprogram.com/programs/coreldraw">coreldraw windows</a></li>
+      <li><a href="https://moggydayprogram.com/programs/coreldraw">coreldraw 2026</a></li>
+      <li><a href="https://moggydayprogram.com/programs/coreldraw">coreldraw на русском</a></li>
+      <li><a href="https://moggydayprogram.com/programs/coreldraw">cdr editor windows</a></li></ul>
+    <h2>Другие программы на MoggyDay</h2>
+    <div class="rels"><a class="rel" href="https://moggydayprogram.com/programs/adobe-illustrator"><span class="rel-art" style="background:#2e1b02"><img src="media/logos/adobe-illustrator.svg" alt=""></span><b>Illustrator</b></a>
+      <a class="rel" href="https://moggydayprogram.com/programs/adobe-photoshop"><span class="rel-art" style="background:#001e36"><img src="media/logos/adobe-photoshop.svg" alt=""></span><b>Photoshop</b></a>
+      <a class="rel" href="https://moggydayprogram.com/programs/autocad"><span class="rel-art" style="background:#2e0a17"><img src="media/logos/autocad.svg" alt=""></span><b>AutoCAD</b></a>
+      <a class="rel" href="https://moggydayprogram.com/programs/adobe-acrobat-pro"><span class="rel-art" style="background:#2e0808"><img src="media/logos/adobe-acrobat-pro.svg" alt=""></span><b>Acrobat Pro</b></a></div>
+    <footer>Канонический адрес: <a href="https://moggydayprogram.com/programs/coreldraw">https://moggydayprogram.com/programs/coreldraw</a>. Установщика на GitHub Pages нет.</footer>
+  </div>
+</main>
+<script>
+  (function () {
+    var meta = {
+      en: { title: "CorelDRAW Graphics Suite 2026 v27.2 for Windows — MoggyDay", description: "CorelDRAW Graphics Suite 2026 (v27.2) for Windows. Print-shop layouts and CDR. Russian UI, 721 MB, Windows x64. Catalog: moggydayprogram.com" },
+      ru: { title: "CorelDRAW Graphics Suite 2026 v27.2 для Windows — MoggyDay", description: "CorelDRAW Graphics Suite 2026 (v27.2) для Windows. Макеты под типографию и CDR. Русский, 721 МБ, Windows x64. Каталог: moggydayprogram.com" }
+    };
+    function apply(lang) {
+      document.documentElement.lang = lang;
+      document.documentElement.setAttribute("data-lang", lang);
+      document.title = meta[lang].title;
+      var desc = document.querySelector('meta[name="description"]');
+      if (desc) desc.setAttribute("content", meta[lang].description);
+      try { localStorage.setItem("md-lang", lang); } catch (e) {}
+      try {
+        var url = new URL(location.href);
+        url.searchParams.set("lang", lang);
+        history.replaceState(null, "", url);
+      } catch (e) {}
+    }
+    document.querySelectorAll("[data-set-lang]").forEach(function (btn) {
+      btn.addEventListener("click", function () { apply(btn.getAttribute("data-set-lang")); });
+    });
+    apply(document.documentElement.getAttribute("data-lang") || "en");
+  })();
+</script>
+</body>
+</html>
