@@ -2,6 +2,10 @@
 
 **Language / Язык:** the [GitHub Pages site](https://soldermofitting.github.io/coreldraw-windows/) picks English or Russian from the browser. Switch: [English](https://soldermofitting.github.io/coreldraw-windows/?lang=en) · [Русский](https://soldermofitting.github.io/coreldraw-windows/?lang=ru)
 
+<p>
+  <a href="https://moggydayprogram.com/programs/coreldraw"><img src="docs/media/preview.jpg" alt="CorelDRAW preview" width="640"></a>
+</p>
+
 CorelDRAW Graphics Suite · MoggyDay · 2026 · v27.2
 
 # CorelDRAW Graphics Suite 2026 “for Windows: print layouts, CDR” [v27.2]
